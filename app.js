@@ -18,12 +18,24 @@
 		price: 2.95,
 		description: '. . .',
 		canPurchase: true,
+		images: [
+		{
+			full: 'http://icongal.com/gallery/image/179533/blue_gem_diamond_jewel.png',
+			thumb:'',
+		}
+		]
 	},
 	{
 		name: "Pentagonal Gem",
-		price: 3.15,
+		price: 3.1,
 		description: 'pentagons are cool!',
-		canPurchase: true
+		canPurchase: true,
+		images: [
+		{
+			full: 'http://icongal.com/gallery/image/179491/sapphire_jewel_gem_faceted_blue.png',
+			thumb:'',
+		}
+		]
 	}
 
 	]
@@ -32,7 +44,15 @@
 		type: 'Ruby!',
 		price: 5.75,
 		description: 'shiny beautiful and red',
-		soldOut: false
+		soldOut: false,
+		image: 'http://icons.iconarchive.com/icons/aha-soft/jewelry/256/Gem-icon.png'
 	};
 
 })();
+
+
+
+//NOTES
+//ng-show
+//ng-hide
+//format with filters
