@@ -2,11 +2,19 @@
 <html ng-app="store">
 	<head>
 		<link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+		<script type="text/javascript" src="angular.min.js"></script>
+		<script type="text/javascript" src="app.js"></script>
 	</head>
-	<body ng-controller="StoreController as store" >
-		<div ng-repeat="product in store.products">
-			<h1> {{product.name}} </h1>
-			<h2> {{product.price | currency}} </h2>
+	<body class="list-group" ng-controller="StoreController as store" >
+		<header>
+			<h1 class="text-center">Gemstore</h1>
+			<h2 class="text-center">An Angular Store</h2>
+		</header>
+		<div class="list-group-item" ng-repeat="product in store.products">
+			<h3> 
+				{{product.name}}
+				<em class="pull-right">{{product.price | currency}}</em>
+			</h3>
 			<p> {{product.description}} </p>
 			<img ng-src="{{product.images[0].full}}"/>
 			<button ng-show="product.canPurchase">Add to Cart</button>
@@ -16,9 +24,6 @@
 			<h2> {{jewel.ruby.price | currency}} </h2>
 			<p> {{jewel.ruby.description}} </p>
 			<img ng-src="{{jewel.ruby.image}}">
-
 		</div>
-		<script type="text/javascript" src="angular.min.js"></script>
-		<script type="text/javascript" src="app.js"></script>
 	</body>
 </html>
