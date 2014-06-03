@@ -28,7 +28,7 @@
 	{
 		name: 'Dodecahedron',
 		price: 2.95,
-		description: '. . .',
+		description: 'These are so neat!',
 		canPurchase: true,
 		images: [
 		{
