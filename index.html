@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html ng-app="store">
 	<head>
-		<link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
 		<script type="text/javascript" src="angular.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
 		<script type="text/javascript" src="app.js"></script>
 	</head>
 	<body class="list-group" ng-controller="StoreController as store" >
@@ -18,7 +18,7 @@
 			</h3>
 			<p> {{product.description}} </p>
 			<section ng-show="product.images.length">
-				<img ng-src="{{product.images[0].full}}"/>
+				<img ng-src="{{product.images[0]}}"/>
 				<ul class="list-inline thumbs">
 					<li class="thumbnail" ng-repeat="image in product.images">
 						<img ng-src="{{image}}"/>
@@ -37,15 +37,15 @@
 				</ul>
 				<div ng-show="tab.isSet(1)">
 					<h4>Description</h4>
-					<blockquote></blockquote>
+					<blockquote>{{product.description}}</blockquote>
 				</div>
 				<div ng-show="tab.isSet(2)">
 					<h4> Specs </h4>
-					<blockquote>Shine: </blockquote>
+					<blockquote>Shine: {{product.shine}} </blockquote>
 				</div>
 				<div ng-show="tab.isSet(3)">
 					<h4>Reviews</h4>
-					<blockquote></blockquote>
+					<blockquote>{{product.reviews}}</blockquote>
 				</div>
 			</section>
 		</div>
